@@ -77,3 +77,24 @@ class _HomePageState extends State<HomePage> {
                         style: TextStyle(fontSize: 18, color: Colors.white),
                       ),
                     ),
+                    Container(
+                      padding: EdgeInsets.all(15),
+                      alignment: Alignment.centerRight,
+                      child: Text(
+                        answer,
+                        style: TextStyle(
+                            fontSize: 30,
+                            color: Colors.white,
+                            fontWeight: FontWeight.bold),
+                      ),
+                    )
+                  ]),
+            ),
+          ),
+          Expanded(
+            flex: 3,
+            child: Container(
+              child: GridView.builder(
+                  itemCount: buttons.length,
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      crossAxisCount: 4),
