@@ -22,3 +22,35 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+ass HomePage extends StatefulWidget {
+  @override
+  _HomePageState createState() => _HomePageState();
+}
+ 
+class _HomePageState extends State<HomePage> {
+  var userInput = '';
+  var answer = '';
+ 
+  // Array of button
+  final List<String> buttons = [
+    'C',
+    '+/-',
+    '%',
+    'DEL',
+    '7',
+    '8',
+    '9',
+    '/',
+    '4',
+    '5',
+    '6',
+    'x',
+    '1',
+    '2',
+    '3',
+    '-',
+    '0',
+    '.',
+    '=',
+    '+',
+  ];
