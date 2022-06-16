@@ -134,3 +134,56 @@ itemBuilder: (BuildContext context, int index) {
                         color: Colors.blue[50],
                         textColor: Colors.black,
                       );
+                      }
+                    // Delete Button
+                    else if (index == 3) {
+                      return MyButton(
+                        buttontapped: () {
+                          setState(() {
+                            userInput =
+                                userInput.substring(0, userInput.length - 1);
+                                });
+                        },
+                        buttonText: buttons[index],
+                        color: Colors.blue[50],
+                        textColor: Colors.black,
+                      );
+                    }
+                    // Equal_to Button
+                    else if (index == 18) {
+                      return MyButton(
+                        buttontapped: () {
+                          setState(() {
+                            equalPressed();
+                          });
+                        },
+                        buttonText: buttons[index],
+                        color: Colors.orange[700],
+                        textColor: Colors.white,
+                      );
+                    }
+ 
+                    //  other buttons
+                    else {
+                      return MyButton(
+                        buttontapped: () {
+                          setState(() {
+                            userInput += buttons[index];
+                          });
+                        },
+                        buttonText: buttons[index],
+                        color: isOperator(buttons[index])
+                            ? Colors.blueAccent
+                            : Colors.white,
+                        textColor: isOperator(buttons[index])
+                            ? Colors.white
+                            : Colors.black,
+                      );
+                    }
+                  }), // GridView.builder
+            ),
+          ),
+        ],
+      ),
+    );
+  }
