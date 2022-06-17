@@ -13,12 +13,7 @@ class AboutUs extends StatelessWidget {
     return Scaffold(
       appBar:AppBar(title:const Text("Github")),
       
-     drawer: const AppDrawer(),
-      body: Padding(
-        padding: EdgeInsets.all(16),
-        child: Card(
-          child: Text("This is all about Us!!"),
-        )
+     
       
       
       ,)
