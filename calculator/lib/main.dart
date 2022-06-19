@@ -1,24 +1,34 @@
+import 'package:converter/screens/contact_us.dart';
 import 'package:flutter/material.dart';
+import 'buttons.dart';
+import 'package:math_expressions/math_expressions.dart';
+import '../widgets/app_drawer.dart';
+import 'package:converter/screens/about_us.dart';
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
+ 
 class MyApp extends StatelessWidget {
-  const MyApp({ Key? key }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-         title: 'Calculator',
-      theme: ThemeData(
-        // This is the theme of your application.
-        primarySwatch: Colors.blue,
-      ),
-    );
+      debugShowCheckedModeBanner: false,
+      home: HomePage(),
+      routes: {
+        
+         '/contact-us':(context) => ContactUs( companyName: '', email: '', githubUserName: '', phoneNumber: '', facebookHandle: '', instagram: '', linkedinURL: '', twitterHandle: '',),
+         '/about-us':(_)=> const AboutUs(),
+         
+      },
+    ); // MaterialApp
   }
 }
+ 
 class HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
-} 
+}
+ 
 class _HomePageState extends State<HomePage> {
   var userInput = '';
   var answer = '';
@@ -46,15 +56,19 @@ class _HomePageState extends State<HomePage> {
     '=',
     '+',
   ];
+ 
   @override
   Widget build(BuildContext context) {
+
     return Scaffold(
-      appBar: new AppBar(
-        title: new Text("Calculator"),
-      ), //AppBar
+       appBar:AppBar(title: Text("Calculator")),
+    
+     
        drawer:const AppDrawer(),
       backgroundColor: Colors.white38,
-      body: Column(
+      body: 
+      
+      Column(
         children: <Widget>[
           Expanded(
             child: Container(
@@ -86,11 +100,13 @@ class _HomePageState extends State<HomePage> {
           Expanded(
             flex: 3,
             child: Container(
-              child: GridView.builder(
+              
+              child: 
+              GridView.builder(
                   itemCount: buttons.length,
                   gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 4),
-itemBuilder: (BuildContext context, int index) {
+                  itemBuilder: (BuildContext context, int index) {
                     // Clear Button
                     if (index == 0) {
                       return MyButton(
@@ -105,6 +121,7 @@ itemBuilder: (BuildContext context, int index) {
                         textColor: Colors.black,
                       );
                     }
+ 
                     // +/- button
                     else if (index == 1) {
                       return MyButton(
@@ -122,10 +139,10 @@ itemBuilder: (BuildContext context, int index) {
                           });
                         },
                         buttonText: buttons[index],
-                        color: Colors.blue[50],
+                   color: Colors.blue[50],
                         textColor: Colors.black,
                       );
-                      }
+                    }
                     // Delete Button
                     else if (index == 3) {
                       return MyButton(
@@ -153,6 +170,7 @@ itemBuilder: (BuildContext context, int index) {
                         textColor: Colors.white,
                       );
                     }
+ 
                     //  other buttons
                     else {
                       return MyButton(
@@ -175,6 +193,26 @@ itemBuilder: (BuildContext context, int index) {
           ),
         ],
       ),
+      
     );
+  }
+ 
+  bool isOperator(String x) {
+    if (x == '/'   x == 'x'  x == '-'  x == '+'  x == '=') {
+      return true;
+    }
+    return false;
+  }
+ 
+// function to calculate the input operation
+  void equalPressed() {
+    String finaluserinput = userInput;
+    finaluserinput = userInput.replaceAll('x', '*');
+ 
+    Parser p = Parser();
+    Expression exp = p.parse(finaluserinput);
+    ContextModel cm = ContextModel();
+    double eval = exp.evaluate(EvaluationType.REAL, cm);
+    answer = eval.toString();
   }
 }
