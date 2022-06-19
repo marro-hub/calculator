@@ -7,7 +7,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-
          title: 'Calculator',
       theme: ThemeData(
         // This is the theme of your application.
@@ -19,8 +18,7 @@ class MyApp extends StatelessWidget {
 ass HomePage extends StatefulWidget {
   @override
   _HomePageState createState() => _HomePageState();
-}
- 
+} 
 class _HomePageState extends State<HomePage> {
   var userInput = '';
   var answer = '';
@@ -107,7 +105,6 @@ itemBuilder: (BuildContext context, int index) {
                         textColor: Colors.black,
                       );
                     }
- 
                     // +/- button
                     else if (index == 1) {
                       return MyButton(
@@ -156,7 +153,6 @@ itemBuilder: (BuildContext context, int index) {
                         textColor: Colors.white,
                       );
                     }
- 
                     //  other buttons
                     else {
                       return MyButton(
