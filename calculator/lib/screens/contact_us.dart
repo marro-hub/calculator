@@ -153,3 +153,69 @@ class ContactUs extends StatelessWidget {
       },
     );
   }
+@override
+  Widget build(BuildContext context) {
+ 
+    return Scaffold(
+      appBar:AppBar(title:const Text("Contact Us")),
+      
+     drawer: const AppDrawer(),
+    body: 
+    Padding(
+        padding: EdgeInsets.all(16),
+        
+        child: SafeArea(
+        
+        child: SingleChildScrollView(
+          
+          child: Column(
+            
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+           
+              Text(
+                companyName,
+                style: TextStyle(
+                  fontFamily: companyFont ?? 'Pacifico',
+                  fontSize: companyFontSize ?? 40.0,
+                 
+                  fontWeight: companyFontWeight ?? FontWeight.bold,
+                ),
+              ),
+              Visibility(
+                visible: tagLine != null,
+                child: Text(
+                  tagLine ?? "",
+                  style: TextStyle(
+                    fontFamily: taglineFont ?? 'Pacifico',
+                 
+                    fontSize: 20.0,
+                    letterSpacing: 2.0,
+                    fontWeight: taglineFontWeight ?? FontWeight.bold,
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: 10.0,
+              ),
+              Divider(
+                color: dividerColor ?? Colors.teal[200],
+                thickness: dividerThickness ?? 4.0,
+                indent: 50.0,
+                endIndent: 50.0,
+              ),
+              SizedBox(
+                height: 10.0,
+              ),
+              
+              Visibility(
+                visible: phoneNumber != null,
+                child: Card(
+                  clipBehavior: Clip.antiAlias,
+                  margin: EdgeInsets.symmetric(
+                    vertical: 10.0,
+                    horizontal: 25.0,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50.0),
+                  ),
