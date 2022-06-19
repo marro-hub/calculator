@@ -1,3 +1,5 @@
+
+
 library contactus;
 
 import 'dart:ffi';
@@ -102,7 +104,9 @@ class ContactUs extends StatelessWidget {
     this.avatarRadius,
     this.dividerThickness,
   });
-showAlert(BuildContext context) {
+  
+
+  showAlert(BuildContext context) {
     
    
     showDialog(
@@ -239,7 +243,7 @@ showAlert(BuildContext context) {
                   ),
                 ),
               ),
-Card(
+              Card(
                 clipBehavior: Clip.antiAlias,
                 margin: EdgeInsets.symmetric(
                   vertical: 10.0,
@@ -353,7 +357,7 @@ Card(
                     leading: Icon(Typicons.social_github),
                     title: Text(
                       'Github',
-style: TextStyle(
+                      style: TextStyle(
                        
                         fontFamily: textFont,
                       ),
