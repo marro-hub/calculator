@@ -1,10 +1,15 @@
 import 'package:flutter/material.dart';
-
+ 
+// creating Stateless Widget for buttons
 class MyButton extends StatelessWidget {
+   
+  // declaring variables
   final color;
   final textColor;
   final buttonText;
   final buttontapped;
+ 
+  //Constructor
   MyButton({this.color, this.textColor,this.buttonText, this.buttontapped});
  
   @override
