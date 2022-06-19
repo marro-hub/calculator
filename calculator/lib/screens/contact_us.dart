@@ -127,3 +127,29 @@ class ContactUs extends StatelessWidget {
                     child: Text('Call'),
                   ),
                 ),
+                    Divider(),
+                
+                InkWell(
+                  onTap: () => launch('sms:' + phoneNumber!),
+                  child: Container(
+                    alignment: Alignment.center,
+                    height: 50.0,
+                    child: Text('Message'),
+                  ),
+                ),
+                Divider(),
+                InkWell(
+                  onTap: () => launch('https://wa.me/' + phoneNumber!),
+                  child: Container(
+                    alignment: Alignment.center,
+                    height: 50.0,
+                    child: Text('WhatsApp'),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
