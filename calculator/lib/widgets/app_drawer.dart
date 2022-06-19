@@ -1,8 +1,10 @@
 import 'package:converter/main.dart';
 import 'package:flutter/material.dart';
 import 'package:math_expressions/math_expressions.dart';
+
 class AppDrawer extends StatelessWidget {
   const AppDrawer({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Drawer(
@@ -26,29 +28,31 @@ class AppDrawer extends StatelessWidget {
               const Divider(),
                InkWell(
                 onTap: () => {
-                  Navigator.of(context).pushNamed('/about-us')
+                  Navigator.of(context).pushNamed('/contact-us')
                 },
                 child: Row(
                           children: 
                           const [Icon(Icons.phone), 
                           SizedBox(width: 15, height: 60,), 
-                          Text('About Us')],
+                          Text('Contact Us')],
                            ),
               ),
               InkWell(
                onTap: () => {
-                 Navigator.of(context).pushNamed('/fav-items')
+                 Navigator.of(context).pushNamed('/about-us')
                },
                child: Row(
                  children: const [
                    Icon(Icons.emoji_emotions), 
                    SizedBox(width: 15, height: 60,), 
-                   Text('GitHub')],
+                   Text('About Us')],
                ),
              ),
             
-             ],)        
-          )  
+             ],)
+             
+          )
+         
         ],
       ),
     );
