@@ -239,3 +239,117 @@ showAlert(BuildContext context) {
                   ),
                 ),
               ),
+Card(
+                clipBehavior: Clip.antiAlias,
+                margin: EdgeInsets.symmetric(
+                  vertical: 10.0,
+                  horizontal: 25.0,
+                ),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(50.0),
+                ),
+               
+                child: ListTile(
+                  leading: Icon(Typicons.mail),
+                  title: Text(
+                    emailText ?? 'Email ID',
+                    style: TextStyle(
+                      
+                      fontFamily: textFont,
+                    ),
+                  ),
+                  onTap: () => launch('mailto:' + email),
+                ),
+              ),
+              Visibility(
+                visible: twitterHandle != null,
+                child: Card(
+                  clipBehavior: Clip.antiAlias,
+                  margin: EdgeInsets.symmetric(
+                    vertical: 10.0,
+                    horizontal: 25.0,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50.0),
+                  ),
+                  
+                  child: ListTile(
+                    leading: Icon(Typicons.social_twitter),
+                    title: Text(
+                      'Twitter',
+                      style: TextStyle(
+                        
+                        fontFamily: textFont,
+                      ),
+                    ),
+                    onTap: () => launch('https://twitter.com/' + twitterHandle!),
+                  ),
+                ),
+              ),
+              Visibility(
+                visible: facebookHandle != null,
+                child: Card(
+                  clipBehavior: Clip.antiAlias,
+                  margin: EdgeInsets.symmetric(
+                    vertical: 10.0,
+                    horizontal: 25.0,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50.0),
+                  ),
+                 
+                  child: ListTile(
+                    leading: Icon(Typicons.social_facebook),
+                    title: Text(
+                      'Facebook',
+                      style: TextStyle(
+                       
+                        fontFamily: textFont,
+                      ),
+                    ),
+                    onTap: () =>
+                        launch('https://www.facebook.com/' + facebookHandle!),
+                  ),
+                ),
+              ),
+              Visibility(
+                visible: instagram != null,
+                child: Card(
+                  clipBehavior: Clip.antiAlias,
+                  margin: EdgeInsets.symmetric(
+                    vertical: 10.0,
+                    horizontal: 25.0,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50.0),
+                  ),
+                 
+                  child: ListTile(
+                    leading: Icon(Typicons.social_instagram),
+                    title: Text(
+                      'Instagram',
+                      style: TextStyle(
+                       
+                        fontFamily: textFont,
+                      ),
+                    ),
+                    onTap: () => launch('https://instagram.com/' + instagram!),
+                  ),
+                ),
+              ),
+              Visibility(
+                visible: githubUserName != null,
+                child: Card(
+                  clipBehavior: Clip.antiAlias,
+                  margin: EdgeInsets.symmetric(
+                    vertical: 10.0,
+                    horizontal: 25.0,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50.0),
+                  ),
+                  
+                  child: ListTile(
+                    leading: Icon(Typicons.social_github),
+                    title: Text(
+                      'Github',
