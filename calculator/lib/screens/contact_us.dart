@@ -278,5 +278,30 @@ Card(
                   ),
                 ),
               ),
-                  
+              
+                   Visibility(
+                visible: instagram != null,
+                child: Card(
+                  clipBehavior: Clip.antiAlias,
+                  margin: EdgeInsets.symmetric(
+                    vertical: 10.0,
+                    horizontal: 25.0,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50.0),
+                  ),
+                 
+                  child: ListTile(
+                    leading: Icon(Typicons.social_instagram),
+                    title: Text(
+                      'Instagram',
+                      style: TextStyle(
+                       
+                        fontFamily: textFont,
+                      ),
+                    ),
+                    onTap: () => launch('https://instagram.com/' + instagram!),
+                  ),
+                ),
+              ),
   
