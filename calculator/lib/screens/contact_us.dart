@@ -264,5 +264,19 @@ Card(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50.0),
                   ),
+                    child: ListTile(
+                    leading: Icon(Typicons.social_facebook),
+                    title: Text(
+                      'Facebook',
+                      style: TextStyle(
+                       
+                        fontFamily: textFont,
+                      ),
+                    ),
+                    onTap: () =>
+                        launch('https://www.facebook.com/' + facebookHandle!),
+                  ),
+                ),
+              ),
                   
   
