@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:typicons_flutter/typicons_flutter.dart';
 import '../widgets/app_drawer.dart';
 
 class AboutUs extends StatelessWidget {
@@ -11,14 +12,20 @@ class AboutUs extends StatelessWidget {
   Widget build(BuildContext context) {
    
     return Scaffold(
-      appBar:AppBar(title:const Text("Github")),
+      appBar:AppBar(title:const Text("About Us")),
       
      drawer: const AppDrawer(),
-      body: Padding(
-        padding: EdgeInsets.all(16),
-        child: Card(
-          child: Text("This is all about Us!!"),
-        ),)
+       body: Center(
+            child: Container(
+              
+                child: Text(
+              'Calculator ver 1.0.0\n  \n @2022 All Rights Reserved \n \n Developed by WKU students. \n ',
+              textAlign: TextAlign.center,
+              overflow: TextOverflow.ellipsis,
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 26),
+              
+            )),
+          )
     );
   }
 }
