@@ -100,3 +100,30 @@ class ContactUs extends StatelessWidget {
     this.avatarRadius,
     this.dividerThickness,
   });
+  showAlert(BuildContext context) {
+    
+   
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+       
+          elevation: 8.0,
+         
+          contentPadding: EdgeInsets.all(18.0),
+          shape:
+              RoundedRectangleBorder(borderRadius: BorderRadius.circular(30.0)),
+          content: Container(
+            
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                InkWell(
+                  onTap: () => launch('tel:' + phoneNumber!),
+                  child: Container(
+                    height: 50.0,
+                    alignment: Alignment.center,
+                    child: Text('Call'),
+                  ),
+                ),
