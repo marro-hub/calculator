@@ -328,4 +328,50 @@ Card(
                     onTap: () => launch('https://github.com/marro-hub/calculator' + githubUserName!),
                   ),
                 ),
+              ), 
+              
+              
+              Visibility(
+                visible: linkedinURL != null,
+                child: Card(
+                  clipBehavior: Clip.antiAlias,
+                  margin: EdgeInsets.symmetric(
+                    vertical: 10.0,
+                    horizontal: 25.0,
+                  ),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(50.0),
+                  ),
+                  
+                  child: ListTile(
+                    leading: Icon(Typicons.social_linkedin),
+                    title: Text(
+                      'Linkedin',
+                      style: TextStyle(
+                       
+                        fontFamily: textFont,
+                      ),
+                    ),
+                    onTap: () => launch(linkedinURL!),
+                  ),
+                ),
               ),
+               Align(
+          alignment: Alignment.bottomCenter,
+          child: Text("\n\n  Get In Touch!  ",
+           
+              
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30 ,backgroundColor:Colors.greenAccent)
+        )),
+            ],
+          ),
+        ),
+      ),
+      
+      
+      )
+      
+    );
+  }
+}
+              
