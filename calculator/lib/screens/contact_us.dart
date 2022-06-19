@@ -75,3 +75,28 @@ class ContactUs extends StatelessWidget {
 
   /// avatar radius will place the circularavatar according to developer/UI need
   final double? avatarRadius;
+  ContactUs({
+    required this.companyName,
+   
+    required this.email,
+    this.emailText,
+   
+    required this.phoneNumber,
+    this.phoneNumberText,
+    
+    required this.twitterHandle,
+    required this.facebookHandle,
+    required this.linkedinURL,
+    required this.githubUserName,
+    this.tagLine,
+    required this.instagram,
+    this.companyFontSize,
+    this.textFont,
+    this.companyFont,
+    this.taglineFont,
+    this.dividerColor,
+    this.companyFontWeight,
+    this.taglineFontWeight,
+    this.avatarRadius,
+    this.dividerThickness,
+  });
