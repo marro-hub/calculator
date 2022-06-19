@@ -11,8 +11,6 @@ class MyApp extends StatelessWidget {
          title: 'Calculator',
       theme: ThemeData(
         // This is the theme of your application.
-        //
-  
         primarySwatch: Colors.blue,
       ),
     );
