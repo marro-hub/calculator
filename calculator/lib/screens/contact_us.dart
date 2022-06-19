@@ -241,3 +241,16 @@ Card(
                 shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(50.0),
                 ),
+  child: ListTile(
+                  leading: Icon(Typicons.mail),
+                  title: Text(
+                    emailText ?? 'Email ID',
+                    style: TextStyle(
+                      
+                      fontFamily: textFont,
+                    ),
+                  ),
+                  onTap: () => launch('mailto:' + email),
+                ),
+              ),
+  
