@@ -1,22 +1,16 @@
 library contactus;
-
 import 'dart:ffi';
-
 import 'package:flutter/material.dart';
 import 'package:typicons_flutter/typicons_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../widgets/app_drawer.dart';
 
-
 ///Class for adding contact details/profile details as a complete new page in your flutter app.
 class ContactUs extends StatelessWidget {
 
   static const routeName='/contact-us';
-
-    
-
   final String? phoneNumber;
-
+  
   ///Text for Phonenumber
   final String? phoneNumberText;
 
@@ -80,10 +74,8 @@ class ContactUs extends StatelessWidget {
    
     required this.email,
     this.emailText,
-   
     required this.phoneNumber,
-    this.phoneNumberText,
-    
+    this.phoneNumberText,    
     required this.twitterHandle,
     required this.facebookHandle,
     required this.linkedinURL,
@@ -359,8 +351,7 @@ Card(
                Align(
           alignment: Alignment.bottomCenter,
           child: Text("\n\n  Get In Touch!  ",
-           
-              
+            
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30 ,backgroundColor:Colors.greenAccent)
         )),
             ],
@@ -374,4 +365,3 @@ Card(
     );
   }
 }
-              
