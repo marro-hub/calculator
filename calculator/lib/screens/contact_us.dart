@@ -219,3 +219,16 @@ class ContactUs extends StatelessWidget {
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(50.0),
                   ),
+                  child: ListTile(
+                    leading: Icon(Typicons.phone),
+                    title: Text(
+                      phoneNumberText ?? 'Phone Number',
+                      style: TextStyle(
+                        
+                        fontFamily: textFont,
+                      ),
+                    ),
+                    onTap: () => showAlert(context),
+                  ),
+                ),
+              ),
