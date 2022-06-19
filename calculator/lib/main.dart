@@ -168,4 +168,13 @@ itemBuilder: (BuildContext context, int index) {
                         textColor: isOperator(buttons[index])
                             ? Colors.white
                             : Colors.black,
-                   
+                      );
+                    }
+                  }), // GridView.builder
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
