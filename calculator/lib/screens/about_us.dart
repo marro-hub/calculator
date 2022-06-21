@@ -23,5 +23,9 @@ class AboutUs extends StatelessWidget {
               textAlign: TextAlign.center,
               overflow: TextOverflow.ellipsis,
               style: TextStyle(fontWeight: FontWeight.bold, fontSize: 26),
-              
+              )),
+          )
+    );
+  }
+}
             
