@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> {
   var userInput = '';
   var answer = '';
  
-  // Array of button
+ 
   final List<String> buttons = [
     'C',
     '+/-',
